@@ -1,0 +1,62 @@
+/* styles/SignupForm.module.css */
+.signupForm {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #420f0f;
+}
+
+.formGroup {
+    margin-bottom: 15px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+}
+
+.submitButton {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0275d8;
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #025aa5;
+}
+
+
+/* Add to styles/SignupForm.module.css */
+.successText {
+    color: #28a745; /* Example success color */
+    font-size: 1em;
+    margin-bottom: 15px;
+}
+
+.errorText {
+    color: #e63946; /* Example error color */
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.errorInput {
+    border-color: #e63946; /* Example error color */
+}

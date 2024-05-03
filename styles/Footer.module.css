@@ -1,0 +1,7 @@
+/* components/layout/Footer.module.css */
+.footerContainer {
+    padding: 10px;
+    background-color: #004d99; /* Example color for the footer */
+    color: white;
+    text-align: center;
+}
