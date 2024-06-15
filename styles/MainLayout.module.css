@@ -1,34 +1,28 @@
-/* MainLayout.module.css */
+/* styles/MainLayout.module.css */
 .layoutContainer {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #fff; /* You can change the background color as needed */
-}
-
-.header {
-    padding: 10px;
-    background-color: #004d99; /* Example color for the header */
-    color: white;
-    text-align: center;
+  display: grid; /* Use grid for better layout control */
+  grid-template-rows: auto 1fr auto; /* Header, main, footer */
+  min-height: 100vh; /* Ensure the layout fills the viewport */
+  gap: 0;
 }
 
 .bannerContainer {
-    background-color: #e0f7fa; /* Light blue background, change as needed */
-    padding: 20px 10px;
-    text-align: center;
+  background-color: var(--primary-color); /* Use the primary color */
+  color: var(--text-color-light); /* Ensure text is visible */
+  padding: var(--spacing-medium);
+  text-align: center;
+  min-height: 200px;
 }
 
 .bannerText {
-    font-size: 1.2em;
-    color: #333; /* Dark text color, change as needed */
-    margin: 10px 0;
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-small);
 }
 
 .mainContent {
-    flex-grow: 1;
-    padding: 20px;
-    background-color: #f0f0f0; /* Light grey background for the main content area */
+  padding: var(--spacing-medium);
 }
 
-
+.contentArea {
+  grid-area: main; /* Place this div in the "main" area of the grid */
+}

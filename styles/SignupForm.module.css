@@ -1,62 +1,72 @@
 /* styles/SignupForm.module.css */
 .signupForm {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #420f0f;
+  background-color: var(--bg-color); /* Match the main background color */
+  border: 1px solid var(--neutral-light);
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 350px; /* Adjust the width as needed */
+  margin: 0 auto; /* Center the form horizontally */
 }
 
 .formGroup {
-    margin-bottom: 15px;
+  margin-bottom: var(--spacing-medium);
 }
 
 .formGroup label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: var(--spacing-xsmall);
+  font-weight: bold; /* Emphasize labels */
 }
 
 .formGroup input[type="text"],
 .formGroup input[type="email"],
-.formGroup input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+.formGroup input[type="password"],
+.selectInput {
+  /* Style for select inputs */
+  width: 100%;
+  padding: var(--spacing-xsmall);
+  font-size: var(--font-size-base);
+  border: 1px solid var(--neutral-light);
+  border-radius: var(--border-radius);
+  appearance: none; /* Remove default styles for select */
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-.submitButton {
-    width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    background-color: #0275d8;
-    color: white;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submitButton:hover {
-    background-color: #025aa5;
-}
-
-
-/* Add to styles/SignupForm.module.css */
-.successText {
-    color: #28a745; /* Example success color */
-    font-size: 1em;
-    margin-bottom: 15px;
-}
-
-.errorText {
-    color: #e63946; /* Example error color */
-    font-size: 0.8em;
-    margin-top: 5px;
+.formGroup select:focus {
+  outline: none;
+  border-color: var(--primary-color);
 }
 
 .errorInput {
-    border-color: #e63946; /* Example error color */
+  /* Style for inputs with errors */
+  border-color: var(--error-color);
+}
+
+.errorText {
+  color: var(--error-color);
+  margin-bottom: var(--spacing-small);
+  font-size: 0.8rem; /* Make error text slightly smaller */
+}
+
+.successText {
+  color: var(--accent-color);
+  margin-bottom: var(--spacing-small);
+}
+
+.submitButton {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  padding: var(--spacing-xsmall) var(--spacing-medium);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: bold;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.submitButton:hover {
+  background-color: #0062cc;
 }

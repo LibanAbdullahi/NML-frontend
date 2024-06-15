@@ -1,40 +1,91 @@
-/* Dashboard.module.css */
-.dashboard {
-    padding: 20px;
-    background-color: #f5f5f5; /* Light background for contrast */
-    color: #333; /* Dark text color for readability */
+/* styles/Dashboard.module.css */
+
+/* Container */
+.container {
+  background-color: var(--bg-color); /* Match main background color */
+  padding: var(--spacing-large);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  width: 90%; /* Responsive width */
+  max-width: 800px; /* Maximum width for larger screens */
+  margin: 0 auto;
 }
 
-.record, .newRecordForm, .updateRecordForm {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: white; /* White background for individual records and forms */
+/* Heading */
+.title h1 {
+  font-size: var(--font-size-h1);
+  margin-bottom: var(--spacing-medium);
+  color: var(--text-color);
 }
 
-.record h2, .newRecordForm h2, .updateRecordForm h2 {
-    color: #007bff; /* Example primary color for headings */
+/* Record */
+.record {
+  background-color: var(
+    --neutral-lightest
+  ); /* Lighter background for contrast */
+  padding: var(--spacing-medium);
+  margin-bottom: var(--spacing-medium);
+  border-radius: var(--border-radius);
 }
 
-.inputField {
-    display: block;
-    width: 100%;
-    padding: 8px 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.record h2 {
+  font-size: var(--font-size-h2);
+  margin-bottom: var(--spacing-small);
+  color: var(--text-color);
 }
 
-.button {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+.record p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  margin-bottom: var(--spacing-xsmall);
+  color: var(--text-color);
 }
 
-.button:hover {
-    background-color: #0056b3;
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .recordList {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+  }
+}
+/* styles/Dashboard.module.css */
+/* ... other styles (container, heading, record list, record) ... */
+
+/* Input Fields */
+.formGroup input[type="text"],
+.formGroup textarea,
+.formGroup select {
+  width: 100%; /* Ensure inputs span the full width of their container */
+  padding: var(--spacing-xsmall); /* Consistent padding */
+  font-size: var(--font-size-base); /* Consistent font size */
+  line-height: var(--line-height-base); /* Consistent line height */
+  color: var(--text-color); /* Use the text color variable */
+  background-color: var(--bg-color); /* Use the background color variable */
+  border: 1px solid var(--neutral-light); /* Light border in light mode */
+  border-radius: var(--border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Smooth transition on focus */
+}
+
+/* Focus State */
+.formGroup input[type="text"]:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  outline: none; /* Remove default outline */
+  border-color: var(--primary-color); /* Highlight border on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add a focus ring */
+}
+
+/* Error State */
+.formGroup input.error, /* Style error inputs */
+.formGroup textarea.error,
+.formGroup select.error {
+  border-color: var(--error-color); /* Red border for errors */
+}
+
+/* Dark Mode Adjustments */
+@media (prefers-color-scheme: dark) {
+  .formGroup input[type="text"],
+  .formGroup textarea,
+  .formGroup select {
+    border-color: var(--neutral-dark); /* Adjust border for dark mode */
+  }
 }

@@ -1,16 +1,24 @@
-/* styles/LoginForm.module.css */
-.loginForm {
+.contactContainer {
   background-color: var(--bg-color);
-  border: 1px solid var(--neutral-light);
   padding: var(--spacing-large);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  width: 300px; /* Adjust the width as needed */
-  margin: 0 auto; /* Center the form horizontally */
+  width: 90%; /* Responsive width for smaller screens */
+  max-width: 600px; /* Maximum width for larger screens */
+  margin: 0 auto; /* Center the container */
 }
 
-.formGroup {
+.contactTitle {
+  font-size: var(--font-size-h2);
   margin-bottom: var(--spacing-medium);
+  color: var(--text-color);
+  text-align: center; /* Center the title */
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-medium);
 }
 
 .formGroup label {
@@ -19,38 +27,26 @@
   font-weight: bold;
 }
 
-.formGroup input[type="text"],
-.formGroup input[type="password"] {
+.formGroup input,
+.formGroup textarea {
   width: 100%;
   padding: var(--spacing-xsmall);
   font-size: var(--font-size-base);
   border: 1px solid var(--neutral-light);
   border-radius: var(--border-radius);
-  background-color: var(--bg-color-light);
-}
-
-.errorText {
-  color: var(--error-color);
-  margin-bottom: var(--spacing-small);
-}
-
-.successText {
-  color: var(--accent-color);
-  margin-bottom: var(--spacing-small);
 }
 
 .submitButton {
   background-color: var(--primary-color);
   color: var(--text-color-light);
-  padding: var(--spacing-xsmall) var(--spacing-medium);
+  padding: var(--spacing-small) var(--spacing-medium);
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
   font-weight: bold;
-  width: 100%;
   transition: background-color 0.2s;
 }
 
 .submitButton:hover {
-  background-color: #0062cc; /* Slightly darker on hover */
+  background-color: #0062cc;
 }
