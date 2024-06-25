@@ -1,6 +1,5 @@
-/* styles/DoctorDashboard.module.css */
 .container {
-  display: flex; /* Use flexbox for layout flexibility */
+  display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--spacing-large);
@@ -23,7 +22,7 @@
 /* Form Styles */
 .formGroup {
   display: flex;
-  flex-direction: column; /* Arrange elements vertically by default */
+  flex-direction: column;
   margin-bottom: var(--spacing-medium);
   width: 100%; /* Make form elements full width on mobile */
 }
@@ -41,14 +40,14 @@
   font-size: var(--font-size-base);
   border: 1px solid var(--neutral-light);
   border-radius: var(--border-radius);
+  background-color: var(--bg-color-light);
 }
 
 .formGroup textarea {
   min-height: 100px;
-  resize: vertical; /* Allow vertical resizing of textarea */
+  resize: vertical;
 }
 
-/* Button */
 .saveButton button {
   /* Style the Create Record button */
   background-color: var(--primary-color);
@@ -59,8 +58,8 @@
   cursor: pointer;
   font-weight: bold;
   margin-top: var(--spacing-small);
-  width: 100%; /* Make the button full width on mobile */
-  transition: background-color 0.2s; /* Add smooth transition on hover */
+  width: 100%;
+  transition: background-color 0.2s;
 }
 
 .saveButton button:hover {
@@ -73,21 +72,17 @@
   margin-bottom: var(--spacing-medium);
 }
 
-/* DoctorProfile Styling */
 .doctorProfile {
-  /* Optional: Add a container for DoctorProfile */
   margin-bottom: var(--spacing-large);
   width: 100%;
 }
 
-/* Media Queries for Larger Screens */
 @media (min-width: 768px) {
   .container {
-    flex-direction: row; /* Arrange elements horizontally on larger screens */
+    flex-direction: row;
     align-items: flex-start;
   }
 
-  /* Adjust formGroup layout for larger screens */
   .formGroup {
     flex: 1;
     max-width: 50%;

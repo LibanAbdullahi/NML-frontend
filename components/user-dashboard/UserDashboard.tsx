@@ -52,7 +52,7 @@ const UserDashboard: React.FC<UserDashboardProps> = ({ userId, token }) => {
     <div className={styles.container}>
       <div className={styles.dashboardTitle}>
         {" "}
-        <h1 className={styles.title}>{username} Dashboard</h1>
+        <h1 className={styles.title}>{username} User information</h1>
       </div>
       {isLoading ? (
         <p>Loading health records...</p>

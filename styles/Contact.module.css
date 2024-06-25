@@ -34,6 +34,7 @@
   font-size: var(--font-size-base);
   border: 1px solid var(--neutral-light);
   border-radius: var(--border-radius);
+  background-color: var(--bg-color-light);
 }
 
 .submitButton {

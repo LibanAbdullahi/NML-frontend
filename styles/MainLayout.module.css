@@ -1,8 +1,7 @@
-/* styles/MainLayout.module.css */
 .layoutContainer {
-  display: grid; /* Use grid for better layout control */
-  grid-template-rows: auto 1fr auto; /* Header, main, footer */
-  min-height: 100vh; /* Ensure the layout fills the viewport */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
   gap: 0;
 }
 

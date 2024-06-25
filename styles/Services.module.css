@@ -1,12 +1,10 @@
-/* styles/Services.module.css */
-
 .servicesContainer {
   background-color: var(--bg-color);
   padding: var(--spacing-large);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   width: 90%; /* Responsive width */
-  max-width: 960px; /* Maximum width for larger screens */
+  max-width: 960px;
   margin: 0 auto;
 }
 
